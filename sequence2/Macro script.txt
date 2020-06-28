@@ -1,0 +1,15 @@
+function myFunction() {
+     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  
+  var dataValue = sheet.getRange('D1').getValue()
+  var dataLength = sheet.getRange('D2').getValue()  
+  
+  var rangeA = "A1:A"  + dataLength
+  sheet.getRange(rangeA).setValue(dataValue) 
+  
+}
+
+
+function myFunction2(){
+  SpreadsheetApp.getActiveSpreadsheet().getActiveSheet().getRange("A:A").clear()  
+}
