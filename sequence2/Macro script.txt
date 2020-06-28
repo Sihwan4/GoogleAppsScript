@@ -4,8 +4,20 @@ function myFunction() {
   var dataValue = sheet.getRange('D1').getValue()
   var dataLength = sheet.getRange('D2').getValue()  
   
-  var rangeA = "A1:A"  + dataLength
-  sheet.getRange(rangeA).setValue(dataValue) 
+  
+  if (!isNaN(parseFloat(dataLength)) && isFinite(dataLength) && ( Math.round(dataLength) == dataLength ) ) {
+       
+     if (dataLength < 1 ) {
+         sheet.getRange('A1').setValue('1이상의 정수를 입력')
+     }
+     else  {
+       var rangeA = "A1:A"  + dataLength
+       sheet.getRange(rangeA).setValue(dataValue) 
+    }
+  }
+  else {
+  sheet.getRange('a1').setValue('1이상의 정수를 입력')
+  }
   
 }
 
