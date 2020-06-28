@@ -1,1 +1,9 @@
-seq
+https://docs.google.com/spreadsheets/d/1vnYG2vWLMqNfNNfXHylP5ILsch3zsKQS_tqbcj-GSk8/edit?usp=sharing
+
+=sequence(100,1,0,0)
+
+=filter(A2:B100, A2:A100 > -1, D2:D100 < 10)
+
+=ArrayFormula(A1:A10000)
+
+=ArrayFormula(OFFSET(I1:I1000,0,0,1000,1)&"A")
