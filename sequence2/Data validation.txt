@@ -1,0 +1,13 @@
+https://blog.sheetgo.com/google-sheets-features/validate-input-values-in-google-sheets/
+
+
+데이터> 데이터 확인 
+
+<기준>
+=AND(round(Macro!D2)=Macro!D2, Macro!D2>0)
+
+<잘못된 데이터>
+입력 거부
+
+<디자인>(확인 도움말 텍스트, 표시)
+Please enter an integer value greater than zero
